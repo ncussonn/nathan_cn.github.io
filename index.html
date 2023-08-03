@@ -29,8 +29,8 @@
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:ncussonn@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data/NathanCussonNadeau-CV.pdf">CV</a>/&nbsp;
-                  <a href="https://github.com/ncussonn/">Github</a>/&nbsp;
+                  <a href="data/NathanCussonNadeau-CV.pdf">CV</a>&nbsp;/&nbsp;
+                  <a href="https://github.com/ncussonn/">Github</a>&nbsp;/&nbsp;
                   <a href="https://linkedin.com/nate-cn">LinkedIn</a>
                 </p>
               </td>
@@ -52,47 +52,39 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
     
-      <tr onmouseout="zipnerf_stop()" onmouseover="zipnerf_start()"  bgcolor="#ffffd0">
+      <tr onmouseout="refinecbf_stop()" onmouseover="refinecbf_start()"  bgcolor="#ffffd0">
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
-            <div class="two" id='zipnerf_image'><video  width=100% height=100% muted autoplay loop>
-            <source src="images/refineCBF/cbvf_evolution_experiment.mp4" type="video/mp4">
+            <div class="two" id='refinecbf_image'><video  width=100% height=100% muted autoplay loop>
+            <source src="images/refineCBF/refine_cbf.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
-            <img src='images/zipnerf.jpg' width="160">
+            <img src='images/refineCBF/refine_cbf.jpeg' width="160">
           </div>
           <script type="text/javascript">
-            function zipnerf_start() {
-              document.getElementById('zipnerf_image').style.opacity = "1";
+            function refinecbf_start() {
+              document.getElementById('refinecbf_image').style.opacity = "1";
             }
 
-            function zipnerf_stop() {
-              document.getElementById('zipnerf_image').style.opacity = "0";
+            function refine_stop() {
+              document.getElementById('refinecbf_image').style.opacity = "0";
             }
-            zipnerf_stop()
+            refinecbf_stop()
           </script>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="http://jonbarron.info/zipnerf">
+          <a href="https://github.com/ncussonn/turtwig/blob/master/Validation_of_Refiing_Control_Barrier_Functions_for_Hardware_Applications.pdf">
             <span class="papertitle">Validation of Refining Control Barrier Functions on Hardware</span>
           </a>
-          <br>
-          <strong>Jonathan T. Barron</strong>,
-          <a href="https://bmild.github.io/">Ben Mildenhall</a>,
-          <a href="https://scholar.harvard.edu/dorverbin/home">Dor Verbin</a>,
-          <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
-          <a href="https://phogzone.com/">Peter Hedman</a>
-          <br>
-          <em>ICCV</em>, 2023
-          <br>
-          <a href="http://jonbarron.info/zipnerf">project page</a>
+          
+          <a href="https://github.com/ncussonn/turtwig/tree/master">Code</a>
           /
-          <a href="https://www.youtube.com/watch?v=xrrhynRzC8k">video</a>
+          <a href="https://www.youtube.com/watch?v=QTSLlugEbcA&list=PL-_gS2FerBEOP_CrxeBosCAPUTwxcKlte&index=21">video</a>
           /
-          <a href="https://arxiv.org/abs/2304.06706">arXiv</a>
+          <a href="https://github.com/ncussonn/turtwig/blob/master/Validation_of_Refiing_Control_Barrier_Functions_for_Hardware_Applications.pdf">Thesis</a>
           <p></p>
           <p>
-          Demonstrated that refineCBF can be applied on hardware-in-the-loop by refining an initial conservative and candidate CBF to enforce safety while reaching a goal.
+          Demonstrated that refineCBF can be applied on hardware-in-the-loop use case in the presence of changing obstacles.
           </p>
         </td>
       </tr>    
@@ -120,7 +112,7 @@
               <td style="padding:0px">
                 <br>
                 <p style="text-align:right;font-size:small;">
-                  Open-source code of this website is based on <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>. Massive shout outs to them.
+                  Open-source code of this website is based on <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>. Massive shout outs to them for the fantastic template.
                 </p>
               </td>
             </tr>

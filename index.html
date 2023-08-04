@@ -63,9 +63,9 @@
                     <source src="images/refineCBF/refine_cbf_hw.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                     </video></div>
-                    <img src='images/refineCBF/refine_cbf.jpeg' width="160" style="position: absolute; top: 0; left: 0;">
+                    <!-- <img src='images/refineCBF/refine_cbf.jpeg' width="160" style="position: absolute; top: 0; left: 0;"> -->
                   </div>
-                  <script type="text/javascript">
+                  <!-- <script type="text/javascript">
                     function refine_start() {
                       document.getElementById('refinecbf_image').style.opacity = "1";
                     }
@@ -73,7 +73,7 @@
                       document.getElementById('refinecbf_image').style.opacity = "0";
                     }
                     refine_stop();
-                  </script>
+                  </script> -->
                 </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
                   <a href="https://github.com/ncussonn/turtwig/blob/master/Validation_of_Refiing_Control_Barrier_Functions_for_Hardware_Applications.pdf">
@@ -106,8 +106,7 @@
             <tbody>
               <tr onmouseout="astar_stop()" onmouseover="astar_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
-                  <div class="one" style="position: relative;">
-                    <!-- Wrap the video and image in a container with position: relative -->
+                  <!-- <div class="one" style="position: relative;">
                     <div class="two" id="astar_image">
                       <video width="100%" height="100%" muted autoplay loop style="position: absolute; top: 0; left: 0;">
                         <source src="images/delayed_a_star/delayed_a_star.mp4" type="video/mp4">
@@ -115,15 +114,24 @@
                       </video>
                       <img src='images/delayed_a_star/delayed_a_star.png' width="100%" style="position: absolute; top: 0; left: 0;">
                     </div>
+                  </div> -->
+                  <div class="one">
+                    <div class="two" id='astar_image'>
+                      <img src='images/delayed_a_star/delayed_a_star.png' width="100%" height="100%" >
+                    </div>
+                    <div class="three" id="astar_gif">
+                      <img src='images/delayed_a_star/delayed_a_star.gif' width="100%" height="100%">
+                    </div>
                   </div>
                   <script type="text/javascript">
                     function astar_start() {
                       document.getElementById('astar_image').style.opacity = "0";
+                      document.getElementById('astar_gif').style.opacity = "1";
                     }
                     function astar_stop() {
                       document.getElementById('astar_image').style.opacity = "1";
+                      document.getElementById('astar_gif').style.opacity = "0";
                     }
-                    astar_stop();
                   </script>
                 </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
@@ -226,7 +234,8 @@
                 </td>
                 <script type="text/javascript">
                   function bin_start() {
-                    document.getElementById('bin_image_1').style.opacity = "0";
+                    // NEED TO FIX THIS
+                    document.getElementById('bin_image_1').style.opacity = "1";
                     //document.getElementById('bin_image_2').style.opacity = "1";
                   }
                   function bin_stop() {

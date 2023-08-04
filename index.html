@@ -58,12 +58,12 @@
             <tbody>
               <tr onmouseout="refine_stop()" onmouseover="refine_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='refinecbf_image'><video  width=100% height=100% muted autoplay loop>
+                  <div class="one" style="position: relative;">
+                    <div class="two" id='refinecbf_image'><video  width=100% height=100% muted autoplay loop style="position: absolute; top: 0; left: 0;">
                     <source src="images/refineCBF/refine_cbf_hw.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                     </video></div>
-                    <img src='images/refineCBF/refine_cbf.jpeg' width="160">
+                    <img src='images/refineCBF/refine_cbf.jpeg' width="160" style="position: absolute; top: 0; left: 0;">
                   </div>
                   <script type="text/javascript">
                     function refine_start() {
@@ -118,10 +118,10 @@
                   </div>
                   <script type="text/javascript">
                     function astar_start() {
-                      document.getElementById('astar_image').style.opacity = "1";
+                      document.getElementById('astar_image').style.opacity = "0";
                     }
                     function astar_stop() {
-                      document.getElementById('astar_image').style.opacity = "0";
+                      document.getElementById('astar_image').style.opacity = "1";
                     }
                     astar_stop();
                   </script>
@@ -227,11 +227,11 @@
                 <script type="text/javascript">
                   function bin_start() {
                     document.getElementById('bin_image_1').style.opacity = "0";
-                    document.getElementById('bin_image_2').style.opacity = "1";
+                    //document.getElementById('bin_image_2').style.opacity = "1";
                   }
                   function bin_stop() {
                     document.getElementById('bin_image_1').style.opacity = "1";
-                    document.getElementById('bin_image_2').style.opacity = "0";
+                    //document.getElementById('bin_image_2').style.opacity = "0";
                   }
                 </script>
                 <td style="padding:20px;width:75%;vertical-align:middle">

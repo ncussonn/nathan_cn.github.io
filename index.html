@@ -53,79 +53,7 @@
             </tbody>
           </table>
 
-          <style>
-            .container {
-              position: relative;
-              text-align: center;
-              width: 100%;
-              overflow: hidden;
-            }
-          
-            .video-container {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background-size: cover;
-              background-repeat: no-repeat;
-            }
-          </style>
-          
-          <!-- Project: RefineCBF Hardware -->
-          <div class="container" onmouseover="refine_start()" onmouseout="refine_stop()">
-            <div class="video-container" id="refinecbf_video_1" style="background-image: url('images/refineCBF/refine_cbf_1:1.mp4')"></div>
-            <div class="video-container" id="refinecbf_video_2" style="background-image: url('images/refineCBF/refine_cbf_sim.mp4')"></div>
-            <img src='images/refineCBF/refinecbf_pic.png' style="width: 100%;" id="refinecbf_image">
-          </div>
-          
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle;text-align:center;" colspan="2">
-                  <a href="https://github.com/ncussonn/turtwig/blob/master/Validation_of_Refiing_Control_Barrier_Functions_for_Hardware_Applications.pdf">
-                    <span class="papertitle">Validation of Refining Control Barrier Functions on Hardware</span>
-                  </a>
-                  <br>
-                  <a href="https://github.com/ncussonn/turtwig/tree/master">Code</a>
-                  /
-                  <a href="https://www.youtube.com/watch?v=QTSLlugEbcA&list=PL-_gS2FerBEOP_CrxeBosCAPUTwxcKlte&index=21">Video</a>
-                  /
-                  <a href="https://github.com/ncussonn/turtwig/blob/master/Validation_of_Refiing_Control_Barrier_Functions_for_Hardware_Applications.pdf">Thesis</a>
-                  <p></p>
-                  <p>
-                    Demonstrated that refineCBF can be applied on hardware-in-the-loop use case in the presence of changing obstacles.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          
-          <script>
-            function refine_start() {
-              document.getElementById('refinecbf_image').style.display = "none";
-              document.getElementById('refinecbf_video_1').style.display = "block";
-              document.getElementById('refinecbf_video_2').style.display = "block";
-            }
-            function refine_stop() {
-              document.getElementById('refinecbf_image').style.display = "block";
-              document.getElementById('refinecbf_video_1').style.display = "none";
-              document.getElementById('refinecbf_video_2').style.display = "none";
-              pauseVideos();
-            }
-          
-            function pauseVideos() {
-              const videos = document.querySelectorAll('.video-container');
-              videos.forEach(video => {
-                video.style.backgroundImage = ''; // Reset background image to pause the video
-              });
-            }
-          </script>
-          
-          
-
-
-          <!-- Project: RefineCBF Hardware
+          <!--Project: RefineCBF Hardware-->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr onmouseout="refine_stop()" onmouseover="refine_start()">
@@ -139,7 +67,7 @@
                     </div>
                     <br>
                     <div class="three" id="refinecbf_image">
-                      <img src='images/refineCBF/refinecbf_pic.png' width="160">
+                      <img src='images/refineCBF/refine_cbf_demo.gif' width="160">
                     </div>
                   </div>
                   <script type="text/javascript">
@@ -174,7 +102,7 @@
                 </td>
               </tr>
             </tbody>
-          </table> -->
+          </table>
           <!-- Project: Delayed A* Motion Planning -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
@@ -333,13 +261,13 @@
                   <div class="one">
                     <div class="two" id='ocean_video'>
                       <video width="100%" height="100%" muted loop>
-                        <source src="images/oceanography/" type="video/mp4">
+                        <source src="images/oceanography/ocean.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
                     <br>
                     <div class="three" id="ocean_image">
-                      <img src='images/dynamic_programming/doorkeypng.png' width="160">
+                      <img src='images/oceanography/ocean_pic.jpeg' width="160">
                     </div>
                   </div>
                   <script type="text/javascript">
@@ -452,7 +380,7 @@
                   <br>
                   <em>General Atomics - Aeronautical Systems, Inc.</em>
                   <br>
-                  October 2019 &#8212 December 2020
+                  June 2022 &#8212 September 2022
                 </td>
               </tr>
               <tr>

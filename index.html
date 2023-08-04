@@ -57,12 +57,20 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <!-- Row Above -->
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle" colspan="2">
-                  <!-- Your image goes here -->
+              <!-- <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle" colspan="2">
                   <div style="text-align: center;">
                     <img src="images/refineCBF/refine_cbf_demo.gif" alt="RefineCBF Overview">
                   </div>
+                </td>
+              </tr> -->
+              <tr>
+                <td style="padding:0;width:25%;vertical-align:middle" colspan="2">
+                  <!-- Your video goes here -->
+                  <video width="100%" height="auto" muted loop autoplay>
+                    <source src="images/refineCBF/refine_cbf_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
                 </td>
               </tr>
               <tr onmouseout="refine_stop()" onmouseover="refine_start()" bgcolor="#ffffd0">
@@ -75,14 +83,14 @@
                     <img src='images/refineCBF/refine_cbf.jpeg' width="160">
                   </div>
                   <script type="text/javascript">
-                    function refinecbf_start() {
+                    function refine_start() {
                       document.getElementById('refinecbf_image').style.opacity = "1";
                     }
         
-                    function refinecbf_stop() {
+                    function refine_stop() {
                       document.getElementById('refinecbf_image').style.opacity = "0";
                     }
-                    refinecbf_stop();
+                    refine_stop();
                   </script>
                 </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
@@ -217,7 +225,7 @@
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='bin_video'>
-                      <img src='images/color_classification/recycle_bin.png' width="160">
+                      <img src='images/color_classification/recycle_bin_1.png' width="160">
                     </div>
                   </div>
                 </td>

@@ -40,6 +40,7 @@
               </tr>
             </tbody>
           </table>
+
           <!-- Projects Section Header-->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
@@ -52,34 +53,24 @@
             </tbody>
           </table>
           <!-- Project: RefineCBF Hardware -->
+          <div style="text-align: center;">
+            <img src='images/refineCBF/refinecbf_pic.png' style="width: 100%;" onmouseover="refine_start()" onmouseout="refine_stop()" id="refinecbf_image">
+            <video width="100%" height="100%" style="display: none;" id="refinecbf_video_1" muted loop>
+              <source src="images/refineCBF/refine_cbf_1:1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video width="100%" height="100%" style="display: none;" id="refinecbf_video_2" muted loop>
+              <source src="images/refineCBF/refine_cbf_sim.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
-              <tr onmouseout="refine_stop()" onmouseover="refine_start()">
-                <td style="padding:20px;width:100%;vertical-align:middle;text-align:center;" colspan="2">
-                  <div class="one">
-                    <div class="two" id='refinecbf_video_1'>
-                      <video width="100%" height="100%" muted loop>
-                        <source src="images/refineCBF/refine_cbf_1:1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                    <div class="two" id='refinecbf_video_2'>
-                      <video width="100%" height="100%" muted loop>
-                        <source src="images/refineCBF/refine_cbf_sim.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                    <br>
-                    <div class="three" id="refinecbf_image">
-                      <img src='images/refineCBF/refinecbf_pic.png' width="100%">
-                    </div>
-                  </div>
-                </td>
-              </tr>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle;text-align:center;" colspan="2">
                   <a href="https://github.com/ncussonn/turtwig/blob/master/Validation_of_Refiing_Control_Barrier_Functions_for_Hardware_Applications.pdf">
-                    <span class="papertitle">Validation of Refining Control Barrier Functions on Hardware</span>
+                    <span class="papertitle">Thesis: Validation of Refining Control Barrier Functions on Hardware</span>
                   </a>
                   <br>
                   <a href="https://github.com/ncussonn/turtwig/tree/master">Code</a>
@@ -95,26 +86,27 @@
               </tr>
             </tbody>
           </table>
+
           <script>
             function refine_start() {
               document.getElementById('refinecbf_image').style.display = "none";
               document.getElementById('refinecbf_video_1').style.display = "block";
               document.getElementById('refinecbf_video_2').style.display = "block";
-              document.getElementById('refinecbf_video_1').querySelector('video').play();
-              document.getElementById('refinecbf_video_2').querySelector('video').play();
+              document.getElementById('refinecbf_video_1').play();
+              document.getElementById('refinecbf_video_2').play();
             }
             function refine_stop() {
               document.getElementById('refinecbf_image').style.display = "block";
               document.getElementById('refinecbf_video_1').style.display = "none";
               document.getElementById('refinecbf_video_2').style.display = "none";
-              const videos = document.querySelectorAll('video');
-              videos.forEach(video => {
-                video.pause();
-                video.currentTime = 0;
-              });
+              document.getElementById('refinecbf_video_1').pause();
+              document.getElementById('refinecbf_video_1').currentTime = 0;
+              document.getElementById('refinecbf_video_2').pause();
+              document.getElementById('refinecbf_video_2').currentTime = 0;
             }
             refine_stop();
           </script>
+
 
           <!-- Project: RefineCBF Hardware
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -195,7 +187,7 @@
                       document.getElementById('astar_video').querySelector('video').pause();
                       document.getElementById('astar_video').querySelector('video').currentTime = 0;
                     }
-                    refine_stop();
+                    astar_stop();
                   </script>
                 </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
@@ -220,14 +212,14 @@
               <tr onmouseout="dp_stop()" onmouseover="dp_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <div class="one">
-                    <div class="two" id='astar_video'>
+                    <div class="two" id='dp_video'>
                       <video width="100%" height="100%" muted loop>
                         <source src="images/dynamic_programming/doorkey.gif" type="gif">
                         Your browser does not support the video tag.
                       </video>
                     </div>
                     <br>
-                    <div class="three" id="astar_image">
+                    <div class="three" id="dp_image">
                       <img src='images/dynamic_programming/doorkeypng.png' width="160">
                     </div>
                   </div>
@@ -243,7 +235,7 @@
                       document.getElementById('dp_video').querySelector('video').pause();
                       document.getElementById('dp_video').querySelector('video').currentTime = 0;
                     }
-                    refine_stop();
+                    dp_stop();
                   </script>
                 </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
@@ -289,7 +281,6 @@
               </tr>
             </tbody>
           </table>
-
           <!-- Project: Recycling Bin Color Classification -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
@@ -317,6 +308,54 @@
               </tr>
             </tbody>
           </table>
+          <!-- Project: Oceanography -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr onmouseout="ocean_stop()" onmouseover="ocean_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='ocean_video'>
+                      <video width="100%" height="100%" muted loop>
+                        <source src="images/oceanography/" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <br>
+                    <div class="three" id="ocean_image">
+                      <img src='images/dynamic_programming/doorkeypng.png' width="160">
+                    </div>
+                  </div>
+                  <script type="text/javascript">
+                    function dp_start() {
+                      document.getElementById('dp_image').style.opacity = "0";
+                      document.getElementById('dp_video').style.opacity = "1";
+                      document.getElementById('dp_video').querySelector('video').play();
+                    }
+                    function dp_stop() {
+                      document.getElementById('dp_image').style.opacity = "1";
+                      document.getElementById('dp_video').style.opacity = "0";
+                      document.getElementById('dp_video').querySelector('video').pause();
+                      document.getElementById('dp_video').querySelector('video').currentTime = 0;
+                    }
+                    dp_stop();
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="https://github.com/ncussonn/Dynamic-Programming">
+                    <span class="papertitle">Dynamic Programming</span>
+                  </a>
+                  <br>
+                  <a href="https://github.com/ncussonn/Dynamic-Programming">Code</a>
+                  /
+                  <a href="https://github.com/ncussonn/Dynamic-Programming/blob/main/ECE_276B_Project_1_Report%20(2).pdf">Report</a>
+                  <p></p>
+                  <p>
+                    Used the dynamic programming principle to construct the optimal control policy for an agent in a randomly generated door-key grid-world environment to reach a goal.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
           <!-- Education Section Header -->
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
@@ -324,7 +363,6 @@
               <tr>
                 <td>
                   <h2>Education</h2>
-
                 </td>
               </tr>
             </tbody>
@@ -332,6 +370,7 @@
           <!-- Education: Schools -->
           <table width="100%" align="center" border="0" cellpadding="20">
             <tbody>
+              <!--MS: UCSD-->
               <tr>
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <a href="https://ucsd.edu">
@@ -346,6 +385,7 @@
                   September 2021 &#8212 July 2023
                 </td>
               </tr>
+              <!--BS: UCSD-->
               <tr>
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <a href="https://ucsd.edu">
@@ -358,6 +398,109 @@
                   <em>University of California, San Diego</em>
                   <br>
                   September 2013 &#8212 June 2017
+                </td>
+              </tr>
+              <!--Supp: SDSU-->
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <a href="https://www.sdsu.edu/">
+                    <img src="images/sdsu_logo.png" width="200">
+                  </a>
+                </td>
+                <td style="padding:0px;width:75%;vertical-align:middle">
+                  <strong>Bachelor of Science (B.Sc.) in Environmental Engineering</strong>
+                  <br>
+                  <em>University of California, San Diego</em>
+                  <br>
+                  September 2013 &#8212 June 2017
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Work Experience Section Header -->
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <h2>Work Experience</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Work Experience: Companies -->
+          <table width="100%" align="center" border="0" cellpadding="20">
+            <tbody>
+              <!-- GA-ASI SWE-->
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <a href="https://www.mesaenergy.com/">
+                    <img src="images/mesa_energy_logo.png" width="200">
+                  </a>
+                </td>
+                <td style="padding:0px;width:75%;vertical-align:middle">
+                  <strong>Graduate Software Engineer Intern</strong>
+                  <br>
+                  <em>General Atomics - Aeronautical Systems, Inc.</em>
+                  <br>
+                  October 2019 &#8212 December 2020
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <a href="https://www.mesaenergy.com/">
+                    <img src="images/mesa_energy_logo.png" width="200">
+                  </a>
+                </td>
+                <td style="padding:0px;width:75%;vertical-align:middle">
+                  <strong>Application Engineer II</strong>
+                  <br>
+                  <em>Emcor - Mesa Energy Systems</em>
+                  <br>
+                  October 2019 &#8212 December 2020
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <a href="https://www.albireoenergy.com/">
+                    <img src="images/logo-abireo-energy.png" width="200">
+                  </a>
+                </td>
+                <td style="padding:0px;width:75%;vertical-align:middle">
+                  <strong>Design Engineer I</strong>
+                  <br>
+                  <em>Albireo Energy</em>
+                  <br>
+                  March 2018 &#8212 September 2019
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <a href="https://www.scsengineers.com/">
+                    <img src="images/scs_engineers_logo.png" width="200">
+                  </a>
+                </td>
+                <td style="padding:0px;width:75%;vertical-align:middle">
+                  <strong>Environmental Consultant</strong>
+                  <br>
+                  <em>SCS Engineers</em>
+                  <br>
+                  2017 &#8212 2018
+                </td>
+              </tr>
+              <!-- Student Researcher Scripps Institute of Oceanography-->
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <a href="https://scripps.ucsd.edu/">
+                    <img src="images/scrippslogo.png" width="200">
+                  </a>
+                </td>
+                <td style="padding:0px;width:75%;vertical-align:middle">
+                  <strong>Student Researcher</strong>
+                  <br>
+                  <em>Scripps Institute of Oceanography</em>
+                  <br>
+                  2016 &#8212 2017
                 </td>
               </tr>
             </tbody>

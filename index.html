@@ -52,34 +52,31 @@
               </tr>
             </tbody>
           </table>
-          
+
           <style>
             .container {
               position: relative;
               text-align: center;
               width: 100%;
+              overflow: hidden;
             }
           
-            .container video {
+            .video-container {
               position: absolute;
               top: 0;
               left: 0;
               width: 100%;
               height: 100%;
+              background-size: cover;
+              background-repeat: no-repeat;
             }
           </style>
           
           <!-- Project: RefineCBF Hardware -->
           <div class="container" onmouseover="refine_start()" onmouseout="refine_stop()">
+            <div class="video-container" id="refinecbf_video_1" style="background-image: url('images/refineCBF/refine_cbf_1:1.mp4')"></div>
+            <div class="video-container" id="refinecbf_video_2" style="background-image: url('images/refineCBF/refine_cbf_sim.mp4')"></div>
             <img src='images/refineCBF/refinecbf_pic.png' style="width: 100%;" id="refinecbf_image">
-            <video style="display: none;" id="refinecbf_video_1" muted loop>
-              <source src="images/refineCBF/refine_cbf_1:1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <video style="display: none;" id="refinecbf_video_2" muted loop>
-              <source src="images/refineCBF/refine_cbf_sim.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
           </div>
           
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -109,20 +106,22 @@
               document.getElementById('refinecbf_image').style.display = "none";
               document.getElementById('refinecbf_video_1').style.display = "block";
               document.getElementById('refinecbf_video_2').style.display = "block";
-              document.getElementById('refinecbf_video_1').play();
-              document.getElementById('refinecbf_video_2').play();
             }
             function refine_stop() {
               document.getElementById('refinecbf_image').style.display = "block";
               document.getElementById('refinecbf_video_1').style.display = "none";
               document.getElementById('refinecbf_video_2').style.display = "none";
-              document.getElementById('refinecbf_video_1').pause();
-              document.getElementById('refinecbf_video_1').currentTime = 0;
-              document.getElementById('refinecbf_video_2').pause();
-              document.getElementById('refinecbf_video_2').currentTime = 0;
+              pauseVideos();
             }
-            refine_stop();
+          
+            function pauseVideos() {
+              const videos = document.querySelectorAll('.video-container');
+              videos.forEach(video => {
+                video.style.backgroundImage = ''; // Reset background image to pause the video
+              });
+            }
           </script>
+          
           
 
 
@@ -402,21 +401,7 @@
                   <br>
                   September 2021 &#8212 July 2023
                   <br>
-                  <strong>Bachelor of Science (B.Sc.) in Environmental Engineering</strong>
                   <br>
-                  <em>University of California, San Diego</em>
-                  <br>
-                  September 2013 &#8212 June 2017
-                </td>
-              </tr>
-              <!--BS: UCSD-->
-              <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <a href="https://ucsd.edu">
-                    <img src="images/UCSD-Seal-Logo.png" width="200">
-                  </a>
-                </td>
-                <td style="padding:0px;width:75%;vertical-align:middle">
                   <strong>Bachelor of Science (B.Sc.) in Environmental Engineering</strong>
                   <br>
                   <em>University of California, San Diego</em>

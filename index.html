@@ -56,24 +56,7 @@
           <!--Project: RefineCBF Hardware-->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
-              <!-- Row Above -->
-              <!-- <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle" colspan="2">
-                  <div style="text-align: center;">
-                    <img src="images/refineCBF/refine_cbf_demo.gif" alt="RefineCBF Overview">
-                  </div>
-                </td>
-              </tr> -->
-              <tr>
-                <td style="padding:0;width:25%;vertical-align:middle" colspan="2">
-                  <!-- Your video goes here -->
-                  <video width="100%" height="auto" muted loop autoplay>
-                    <source src="images/refineCBF/refine_cbf_demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </td>
-              </tr>
-              <tr onmouseout="refine_stop()" onmouseover="refine_start()" bgcolor="#ffffd0">
+              <tr onmouseout="refine_stop()" onmouseover="refine_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='refinecbf_image'><video  width=100% height=100% muted autoplay loop>
@@ -86,7 +69,6 @@
                     function refine_start() {
                       document.getElementById('refinecbf_image').style.opacity = "1";
                     }
-        
                     function refine_stop() {
                       document.getElementById('refinecbf_image').style.opacity = "0";
                     }
@@ -109,6 +91,14 @@
                   </p>
                 </td>
               </tr>
+              <tr>
+                <td style="padding:0;width:25%;vertical-align:middle" colspan="2">
+                  <video width="100%" height="auto" muted loop autoplay>
+                    <source src="images/refineCBF/refine_cbf_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </td>
+              </tr>
             </tbody>
           </table>
           <!-- Project: Delayed A* Motion Planning -->
@@ -116,24 +106,26 @@
             <tbody>
               <tr onmouseout="astar_stop()" onmouseover="astar_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
-                  <div class="one">
+                  <div class="one" style="position: relative;">
+                    <!-- Wrap the video and image in a container with position: relative -->
                     <div class="two" id="astar_image">
-                      <video  width=100% height=100% muted autoplay loop>
+                      <video width="100%" height="100%" muted autoplay loop style="position: absolute; top: 0; left: 0;">
                         <source src="images/delayed_a_star/delayed_a_star.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
+                      <img src='images/delayed_a_star/delayed_a_star.png' width="100%" style="position: absolute; top: 0; left: 0;">
                     </div>
-                    <img src='images/delayed_a_star/delayed_a_star.png' width="160">
-                    <script type="text/javascript">
-                      function astar_start() {
-                        document.getElementById('astar_image').style.opacity = "0";
-                      }
-                      function astar_stop() {
-                        document.getElementById('astar_image').style.opacity = "1";
-                      }
-                      astar_stop();
-                    </script>
-                    
+                  </div>
+                  <script type="text/javascript">
+                    function astar_start() {
+                      document.getElementById('astar_image').style.opacity = "1";
+                    }
+                    function astar_stop() {
+                      document.getElementById('astar_image').style.opacity = "0";
+                    }
+                    astar_stop();
+                  </script>
+                </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
                   <a href="https://github.com/ncussonn/Motion-Planning">
                     <span class="papertitle">Delayed Weighted A*</span>
@@ -150,6 +142,7 @@
               </tr>
             </tbody>
           </table>
+
           <!-- Project: Dynamic Programming -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
@@ -190,7 +183,6 @@
               </tr>
             </tbody>
           </table>
-
           <!-- Project: Particle Filter -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
@@ -221,14 +213,27 @@
           <!-- Project: Recycling Bin Color Classification -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
-              <tr>
+              <tr onmouseout="dp_stop()" onmouseover="dp_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <div class="one">
-                    <div class="two" id='bin_video'>
+                    <div class="two" id='bin_image_1'>
                       <img src='images/color_classification/recycle_bin_1.png' width="160">
                     </div>
-                  </div>
+                    <div class="three" id='bin_image_2'>
+                      <img src='images/color_classification/recycle_bin_2.png' width="160">
+                    </div>
+                  </div>                  
                 </td>
+                <script type="text/javascript">
+                  function bin_start() {
+                    document.getElementById('bin_image_1').style.opacity = "0";
+                    document.getElementById('bin_image_2').style.opacity = "1";
+                  }
+                  function bin_stop() {
+                    document.getElementById('bin_image_1').style.opacity = "1";
+                    document.getElementById('bin_image_2').style.opacity = "0";
+                  }
+                </script>
                 <td style="padding:20px;width:75%;vertical-align:middle">
                   <a href="https://github.com/ncussonn/Color-Classification-and-Recycling-Bin-Detection">
                     <span class="papertitle">Color Classification and Recycling Bin Detection</span>
